@@ -1,4 +1,4 @@
-package com.workflow.SystemDesignZooKafka;
+package com.workflow.SystemDesignZooKafka.zookeeper;
 
 import java.io.IOException;
 import java.util.concurrent.CountDownLatch;

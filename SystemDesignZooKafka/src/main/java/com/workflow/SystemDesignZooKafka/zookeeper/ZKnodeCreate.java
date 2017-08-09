@@ -1,4 +1,4 @@
-package com.workflow.SystemDesignZooKafka;
+package com.workflow.SystemDesignZooKafka.zookeeper;
 
 import java.io.IOException;
 
@@ -22,7 +22,6 @@ public class ZKnodeCreate {
 		
 		String path="/myFirstZnode/children";
 		byte[] data="Data stream for my First child node in ZK app".getBytes();
-		
 		zooKprConn= new ZooKeeperConnection();
 		try {
 			zooKpr=zooKprConn.connect("localhost");
