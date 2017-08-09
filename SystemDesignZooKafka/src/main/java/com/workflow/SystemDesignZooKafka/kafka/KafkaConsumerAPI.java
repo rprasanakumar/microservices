@@ -10,13 +10,13 @@ import java.util.*;
 import kafka.consumer.KafkaStream;
 
 
-public class KafkaConsumer {
+public class KafkaConsumerAPI {
 	
 	private final kafka.javaapi.consumer.ConsumerConnector consumer;
 	private final String topic;
 	Properties properties=new Properties();
 	
-	public KafkaConsumer(String zooKeeper, String groupId, String topic) {
+	public KafkaConsumerAPI(String zooKeeper, String groupId, String topic) {
 		properties.put("zookeeper.connect", zooKeeper);
 		properties.put("group.id", groupId);
 		properties.put("zookeeper.session.timeout.ms", "500");
@@ -49,7 +49,7 @@ public class KafkaConsumer {
 	public static void main(String[] args) {
 		String topic="topic1";
 		
-		KafkaConsumer conSumer=new KafkaConsumer(KafkaProperties.zkConnect, KafkaProperties.producerGroupId, topic);
+		KafkaConsumerAPI conSumer=new KafkaConsumerAPI(KafkaProperties.zkConnect, KafkaProperties.producerGroupId, topic);
 		conSumer.getConsumerMessage();
 	}
 
