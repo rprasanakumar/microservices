@@ -18,6 +18,7 @@ public class KafkaDriverClass {
 		
 		ArrayList<String> topics=new ArrayList<String>();
 		topics.add(topic);
+		topics.add("Offset_Communication_group");
 		
 		final ExecutorService executor = Executors.newFixedThreadPool(numConsumers);
 		final List<KafkaConsumerComplete> listOfKafkaConsumers=new ArrayList<KafkaConsumerComplete>();
@@ -26,7 +27,6 @@ public class KafkaDriverClass {
 			KafkaConsumerComplete conSumr=new KafkaConsumerComplete(topics);
 			listOfKafkaConsumers.add(conSumr);
 			executor.submit(conSumr);
-			
 		}
 		
 		
@@ -34,7 +34,7 @@ public class KafkaDriverClass {
 			@Override
 			public void run() {
 			for (KafkaConsumerComplete consumer : listOfKafkaConsumers) {
-			consumer.shutdown();
+				consumer.shutdown();
 			}
 			executor.shutdown();
 			try {

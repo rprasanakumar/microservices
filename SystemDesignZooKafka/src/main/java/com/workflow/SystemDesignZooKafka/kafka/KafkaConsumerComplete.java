@@ -38,19 +38,16 @@ public class KafkaConsumerComplete implements Runnable{
 		
 	}*/
 	public void run() {
+
 		// TODO Auto-generated method stub
-		
 		consumer.subscribe(topics);
 		
 		while(true) {
-			ConsumerRecords<String, String> records = consumer.poll(1000);
-			
+			ConsumerRecords<String, String> records = consumer.poll(10);
 			for(ConsumerRecord<String, String> rec: records) {
-				System.out.println("message Partition: "+rec.partition() +" message offset: "+rec.offset()+" message : "+rec.value());
-			}
-			
+				System.out.println("message Topic: "+rec.topic() + " message Partition: "+rec.partition() +" message offset: "+rec.offset()+" message : "+rec.value());
+			}			
 		}
-		
 	}
 
 	public void shutdown() {
@@ -58,9 +55,5 @@ public class KafkaConsumerComplete implements Runnable{
 		consumer.wakeup();
 		
 	}
-
-
-	
-	
 
 }

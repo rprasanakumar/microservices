@@ -1,16 +1,11 @@
 package com.workflow.SystemDesignZooKafka.kafka;
 
 
-import kafka.consumer.Consumer;
-import kafka.consumer.ConsumerConfig;
-import kafka.consumer.ConsumerConnector;
-import kafka.consumer.ConsumerIterator;
 
 import java.util.*;
-import kafka.consumer.KafkaStream;
 
 
-public class KafkaConsumerAPI {
+public class KafkaConsumerAPI {/*
 	
 	private final kafka.javaapi.consumer.ConsumerConnector consumer;
 	private final String topic;
@@ -53,4 +48,4 @@ public class KafkaConsumerAPI {
 		conSumer.getConsumerMessage();
 	}
 
-}
+*/}
