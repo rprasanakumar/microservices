@@ -26,7 +26,7 @@ public class ServiceRegistry implements IServiceRegistry{
 	}
 
 	@Override
-	public void registerService(String serviceName, String uri) {
+	public void registerService(String serviceName, String uri, String instanceId) {
 		// TODO Auto-generated method stub
 		
 	}
