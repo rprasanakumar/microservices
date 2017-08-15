@@ -1,10 +1,10 @@
 package com.zookeeper.registration;
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
 
+
+import javax.inject.Inject;
 import com.zookeeper.service.ZooKeeperService;
 
-@ApplicationScoped
+
 @ZooKeeperService
 public class ZookeeperServiceImpl implements IZookeeperService {
 	
