@@ -1,6 +1,6 @@
-package com.service.ZooKeeper.registration;
+package com.zookeeper.registration;
 
-public interface IServiceRegistry {
+public interface IZookeeperService {
 	
 	
 	/**
